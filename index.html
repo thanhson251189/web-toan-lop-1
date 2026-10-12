@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toán Vui Lớp 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- ===== MENU ===== -->
+    <header class="topbar">
+      <h1 class="logo">🧮 Toán Vui Lớp 1</h1>
+      <div class="topbar-right">
+        <div class="stars-total" title="Tổng số sao">⭐ <span id="total-stars">0</span></div>
+        <button id="sound-toggle" class="icon-btn" title="Bật/tắt âm thanh">🔊</button>
+      </div>
+    </header>
+
+    <main id="menu" class="screen">
+      <p class="hello">Chào bé! Chọn trò chơi nào 👇</p>
+      <div class="mode-grid" id="mode-grid"></div>
+    </main>
+
+    <!-- ===== GAME ===== -->
+    <main id="game" class="screen hidden">
+      <div class="game-head">
+        <button id="btn-back" class="icon-btn">🏠</button>
+        <div class="progress" id="progress"></div>
+        <div class="round-score">⭐ <span id="round-stars">0</span></div>
+      </div>
+
+      <div class="question-card" id="question-card">
+        <div class="question-text" id="question-text"></div>
+        <div class="question-visual" id="question-visual"></div>
+        <div class="options" id="options"></div>
+      </div>
+
+      <div class="feedback hidden" id="feedback">
+        <div class="feedback-box" id="feedback-box">
+          <div class="feedback-emoji" id="feedback-emoji"></div>
+          <div class="feedback-text" id="feedback-text"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== RESULT ===== -->
+    <main id="result" class="screen hidden">
+      <div class="result-card">
+        <div class="result-stars" id="result-stars"></div>
+        <div class="result-text" id="result-text"></div>
+        <div class="result-sub" id="result-sub"></div>
+        <div class="result-btns">
+          <button class="big-btn" id="btn-replay">🔄 Chơi lại</button>
+          <button class="big-btn secondary" id="btn-menu">🏠 Về trang chủ</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
