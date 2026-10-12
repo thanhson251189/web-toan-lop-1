@@ -439,8 +439,14 @@ function show(id) {
   ["menu", "game", "result"].forEach((s) => $(s).classList.toggle("hidden", s !== id));
 }
 
-function renderMenu() {
+function stopRound() {
+  clearTimeout(state.timer);
+  hideFeedback();
   if (canSpeak) speechSynthesis.cancel();
+}
+
+function renderMenu() {
+  stopRound();
   $("mode-grid").innerHTML = MODES.map((m) => {
     const best = (store.modes && store.modes[m.id]) || 0;
     return `<button class="mode-card" data-mode="${m.id}">
@@ -462,6 +468,7 @@ function totalStars() {
 }
 
 function startRound(mode) {
+  stopRound();
   state = { mode, qIndex: 0, firstTryCorrect: 0, answered: false };
   $("round-stars").textContent = 0;
   renderProgress();
@@ -508,7 +515,7 @@ function onAnswer(btn, opt) {
     sfxCorrect();
     showFeedback(true);
     spawnStars();
-    setTimeout(() => {
+    state.timer = setTimeout(() => {
       hideFeedback();
       state.qIndex++;
       nextQuestion();
