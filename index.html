@@ -19,6 +19,7 @@
 
     <main id="menu" class="screen">
       <p class="hello">Chào bé! Chọn trò chơi nào 👇</p>
+      <p class="voice-note hidden" id="voice-note">Máy này chưa có giọng đọc tiếng Việt nên câu hỏi sẽ không được đọc to. Bố mẹ có thể cài giọng tiếng Việt trong phần cài đặt của máy.</p>
       <div class="mode-grid" id="mode-grid"></div>
     </main>
 
@@ -31,6 +32,7 @@
       </div>
 
       <div class="question-card" id="question-card">
+        <button id="btn-speak" class="speak-btn hidden" title="Nghe lại câu hỏi">🔊 Nghe</button>
         <div class="question-text" id="question-text"></div>
         <div class="question-visual" id="question-visual"></div>
         <div class="options" id="options"></div>

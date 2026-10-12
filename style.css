@@ -276,3 +276,40 @@ body {
   0% { transform: translateY(0) scale(.6); opacity: 1; }
   100% { transform: translateY(-140px) scale(1.6) rotate(30deg); opacity: 0; }
 }
+
+/* ===== Speech ===== */
+.question-card { position: relative; }
+.speak-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 999px;
+  background: #fff3e0;
+  color: #d35400;
+  cursor: pointer;
+  box-shadow: 0 3px 0 #f5cba7;
+}
+.speak-btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #f5cba7; }
+.voice-note {
+  text-align: center;
+  font-size: .95rem;
+  color: #7c2d12;
+  background: rgba(255,255,255,.7);
+  border-radius: 14px;
+  padding: 8px 12px;
+  margin: -6px auto 14px;
+  max-width: 560px;
+}
+
+/* ===== Clock / ruler / blocks ===== */
+.clock { width: 180px; height: 180px; }
+.ruler-svg { width: 100%; max-width: 440px; height: auto; }
+.blocks { max-width: 100%; height: auto; }
+@media (max-width: 520px) {
+  .speak-btn { position: static; margin: -10px auto 10px; display: block; }
+}
