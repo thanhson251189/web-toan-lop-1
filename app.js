@@ -162,7 +162,6 @@ function rulerSvg(n, color) {
     <line x1="${end}" y1="36" x2="${end}" y2="50" stroke="#2d3436" stroke-width="1.5" stroke-dasharray="3 2"/>
     <rect x="${x0 - 8}" y="50" width="${maxCm * CM + 16}" height="40" rx="4" fill="#fde68a" stroke="#d97706"/>
     ${ticks}
-    <text x="${x0 + maxCm * CM}" y="80" text-anchor="end" font-size="10" fill="#7c2d12"> cm</text>
   </svg>`;
 }
 
